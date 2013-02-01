@@ -1,1 +1,26 @@
 @import "compass_twitter_bootstrap";
+@import "variables";
+
+body {
+  background-color: $bg_color;
+  border-top: 6px solid $text_color;
+  color: $text_color;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.masthead {
+  margin: 60px 0;
+  overflow: hidden;
+  h1 {
+    font-weight: bold;
+    font-size: 58px;
+    letter-spacing: -2px;
+    line-height: 66px;
+    text-transform: lowercase;
+    span {
+      color: darken(#fff, 10);
+    }
+  }
+}
