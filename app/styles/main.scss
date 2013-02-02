@@ -24,6 +24,7 @@
 }
 
 body {
+  background: $bg_color url(../images/groovepaper.png) 0 0 repeat;
   background-color: $bg_color;
   border-top: 6px solid $hover_color;
   color: $text_color;
