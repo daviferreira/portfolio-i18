@@ -25,7 +25,7 @@
 
 body {
   background-color: $bg_color;
-  border-top: 6px solid $text_color;
+  border-top: 6px solid $hover_color;
   color: $text_color;
   font-family: ProximaNova, Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -67,7 +67,7 @@ a {
   article {
     padding: 28px;
     border-top: 3px solid #000;
-    background-color: #c0d23e;
+    background-color: rgba(#fff, .2);
   }
   figure {
     display: block;
@@ -139,7 +139,7 @@ a {
         background-color: $hover_color;
       }
       &.hover {
-        background-color: $hover_color;
+        background-color: rgba($hover_color, .4);
       }
     }
   }
