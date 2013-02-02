@@ -26,7 +26,6 @@
 body {
   background: $bg_color url(../images/groovepaper.png) 0 0 repeat;
   background-color: $bg_color;
-  border-top: 6px solid $hover_color;
   color: $text_color;
   font-family: ProximaNova, Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -44,6 +43,7 @@ a {
   position: relative;
   z-index: 2;
   margin-bottom: 200px;
+  border-top: 6px solid $secondary_color;
   background-color: $bg_color;
   @include box-shadow(0 0 10px #000);
 }
@@ -58,6 +58,7 @@ a {
     letter-spacing: -2px;
     line-height: 62px;
     text-transform: lowercase;
+    color: $title_color;
     span {
       color: $secondary_color;
     }
@@ -67,8 +68,8 @@ a {
 .m-highlights {
   article {
     padding: 28px;
-    border-top: 3px solid #000;
-    background-color: rgba(#fff, .2);
+    border-top: 3px solid $secondary_color;
+    background-color: rgba(#fff, .1);
   }
   figure {
     display: block;
@@ -114,7 +115,7 @@ a {
     font-size: 28px;
     line-height: 28px;
     letter-spacing: -1px;
-    border-bottom: 1px solid rgba($secondary_color, .2);
+    border-bottom: 1px solid rgba($text_color, .2);
   }
 }
 
@@ -129,18 +130,18 @@ a {
     a {
       display: block;
       padding: 6px;
-      color: #000;
+      color: #ccc;
       @include transition((color .2s ease-in-out, background-color .6s ease-in-out));
       &:hover {
-        background-color: #000;
-        color: #fff;
+        background-color: #ccc;
+        color: #333;
         text-decoration: none;
       }
       &:active {
         background-color: $hover_color;
       }
       &.hover {
-        background-color: rgba($hover_color, .4);
+        background-color: rgba($hover_color, .8);
       }
     }
   }
@@ -148,8 +149,17 @@ a {
 }
 
 .m-about-me {
+  img, p {
+    float: left;
+  }
   p {
+    margin: -6px 0 0;
+    width: 510px;
     line-height: 28px;
+  }
+  img {
+    margin: 0 30px 0 0;
+    @include border-radius(40px);
   }
 }
 
@@ -187,17 +197,20 @@ footer {
   }
   .m-credits {
     text-align: right;
+    h5 {
+      margin: 17px 0 5px 0;
+    }
     a {
       color: #ccc;
+      text-decoration: underline;
     }
   }
   a {
-    text-decoration: underline;
     &:hover {
-      color: lighten($hover_color, 15);
+      color: $hover_color;
     }
   }
   h5, .m-credits li {
-    color: lighten($bg_color, 15);
+    color: $secondary_color;
   }
 }
